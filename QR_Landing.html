@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenkeep Access</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f5f5f5; }
+  h2 { margin-bottom: 20px; }
+  p { font-size: 18px; margin-bottom: 30px; }
+  button { padding: 15px 30px; font-size: 18px; margin: 10px; cursor: pointer; border: none; border-radius: 5px; }
+  .admin { background-color: #4CAF50; color: white; }
+  .guest { background-color: #2196F3; color: white; }
+</style>
+</head>
+<body>
+
+<h2>Choose Access Type</h2>
+<p>Greenkeep Box ID: <span id="boxIDDisplay"></span></p>
+
+<button class="admin" id="adminBtn">Admin Access</button>
+<button class="guest" id="guestBtn">Guest Access</button>
+
+<script>
+// 1. Get Greenkeep_Box_ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const boxID = urlParams.get('Greenkeep_Box_ID');
+
+// 2. Display it on the page
+document.getElementById('boxIDDisplay').innerText = boxID;
+
+// 3. Your URLs (replace these with your actual URLs)
+const adminURL = "https://creatorapp.zoho.com/siddharth.singh_glsserv/test-greenkeep-2025/#Report:Item_Report?Greenkeep_Box_ID=";
+const guestURL = "https://creatorapp.zohopublic.com/siddharth.singh_glsserv/2025-01-01-greenkeep-ohr/report-perma/Item_Report/4CDbYejw3eZEZBxAFnDJuZ0GMUwPZhMpUyCq4vqqJs17gPjxDqzA7jxONP0PjGJZy7r5WWeWQbkhYBG734H1gVTuJFSy5ht8garH?Greenkeep_Box_ID=";
+
+// 4. Attach click events
+document.getElementById('adminBtn').addEventListener('click', () => {
+    window.location.href = adminURL + encodeURIComponent(boxID);
+});
+
+document.getElementById('guestBtn').addEventListener('click', () => {
+    window.location.href = guestURL + encodeURIComponent(boxID);
+});
+</script>
+
+</body>
+</html>
