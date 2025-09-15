@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greenkeep Access</title>
+<title>GreenKeep Logistics FZE</title>
 <style>
   body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f5f5f5; }
   h2 { margin-bottom: 20px; }
@@ -24,7 +24,7 @@
 <script>
 // 1. Get Greenkeep_Box_ID from URL
 const urlParams = new URLSearchParams(window.location.search);
-const boxID = urlParams.get('Greenkeep_Box_ID');
+const boxID = urlParams.get('Greenkeep_Box_ID') || 'UNKNOWN';
 
 // 2. Display it on the page
 document.getElementById('boxIDDisplay').innerText = boxID;
@@ -42,6 +42,5 @@ document.getElementById('guestBtn').addEventListener('click', () => {
     window.location.href = guestURL + encodeURIComponent(boxID);
 });
 </script>
-
 </body>
 </html>
