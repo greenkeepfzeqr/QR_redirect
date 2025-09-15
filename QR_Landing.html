@@ -39,12 +39,13 @@ const guestBaseURL = "https://creatorapp.zohopublic.com/siddharth.singh_glsserv/
 
 // 4. Attach click events
 document.getElementById('adminBtn').addEventListener('click', function() {
-    window.location.href = adminBaseURL + "%22" + encodeURIComponent(boxID) + "%22";
+    window.location.href = adminBaseURL + '"' + encodeURIComponent(boxID) + '"';
 });
 
 document.getElementById('guestBtn').addEventListener('click', function() {
-    window.location.href = guestBaseURL + "%22" + encodeURIComponent(boxID) + "%22";
+    window.location.href = guestBaseURL + '"' + encodeURIComponent(boxID) + '"';
 });
 </script>
 </body>
 </html>
+
