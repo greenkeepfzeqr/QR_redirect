@@ -34,18 +34,19 @@ const boxID = getBoxID();
 document.getElementById('boxIDDisplay').innerText = boxID;
 
 // 3. Your URLs (replace these with your actual URLs)
-const adminBaseURL = "https://creatorapp.zoho.com/siddharth.singh_glsserv/test-greenkeep-2025/#Report:Item_Report?Greenkeep_Box_ID=";
-const guestBaseURL = "https://creatorapp.zohopublic.com/siddharth.singh_glsserv/2025-01-01-greenkeep-ohr/report-perma/Item_Report/4CDbYejw3eZEZBxAFnDJuZ0GMUwPZhMpUyCq4vqqJs17gPjxDqzA7jxONP0PjGJZy7r5WWeWQbkhYBG734H1gVTuJFSy5ht8garH?Greenkeep_Box_ID=";
+const adminBaseURL = "https://creatorapp.zoho.com/siddharth.singh_glsserv/test-greenkeep-2025/#Report:Item_Report?Greenkeep_Box_ID==";
+const guestBaseURL = "https://creatorapp.zohopublic.com/siddharth.singh_glsserv/2025-01-01-greenkeep-ohr/report-perma/Item_Report/4CDbYejw3eZEZBxAFnDJuZ0GMUwPZhMpUyCq4vqqJs17gPjxDqzA7jxONP0PjGJZy7r5WWeWQbkhYBG734H1gVTuJFSy5ht8garH?Greenkeep_Box_ID==";
 
 // 4. Attach click events
 document.getElementById('adminBtn').addEventListener('click', function() {
-    window.location.href = adminBaseURL + '"' + encodeURIComponent(boxID) + '"';
+    window.location.href = adminBaseURL + encodeURIComponent(boxID);
 });
 
 document.getElementById('guestBtn').addEventListener('click', function() {
-    window.location.href = guestBaseURL + '"' + encodeURIComponent(boxID) + '"';
+    window.location.href = guestBaseURL + encodeURIComponent(boxID);
 });
 </script>
 </body>
 </html>
+
 
